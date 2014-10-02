@@ -8,3 +8,6 @@ The implementation of some common algorithms from [Algorithms 4th Edition](http:
 * Bubble Sort
 * Selection Sort
 * Insertion Sort
+* Shell Sort
+* Merge Sort
+* Quick Sort
