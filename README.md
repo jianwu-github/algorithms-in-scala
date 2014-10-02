@@ -6,3 +6,5 @@ The implementation of some common algorithms from [Algorithms 4th Edition](http:
 * Fast Three Sum
 * Weighted Quick Union-Find
 * Bubble Sort
+* Selection Sort
+* Insertion Sort
