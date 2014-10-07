@@ -49,6 +49,16 @@ class TestSortAlgorithms extends FunSuite {
     }
   }
   
+  test("Inserting Sort Algorithm using Pattern Matching is correctly implemented") {
+    new TestSets {
+      val testData = createTestDataList
+      
+      val sortedData =  alginsertionsort.insertionSort(testData)
+      
+      assert(testSorted(sortedData), true)
+    }
+  }
+  
   test("Shell Sort Algorithm is correctly implemented") {
     new TestSets {
       val testData = createTestDataArray
