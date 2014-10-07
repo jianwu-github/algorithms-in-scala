@@ -1,7 +1,7 @@
 package coursera.algorithms
 
 object alginsertionsort {
-  def insertionSort(arr: Array[Double]) {
+  def insertionSort[T <% Ordered[T]](arr: Array[T]) {
     for ( i <- 1 until arr.length) {
       val tmp = arr(i)
       var j = i-1

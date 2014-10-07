@@ -1,7 +1,7 @@
 package coursera.algorithms
 
 object algbubblesort {
-  def bubbleSort(arr:Array[Double]) {
+  def bubbleSort[T <% Ordered[T]](arr:Array[T]) {
     for (i <- 0 until arr.length-1; j <- 0 until arr.length-1-i) {
       if (arr(j) > arr(j+1)) {
         val tmp = arr(j)

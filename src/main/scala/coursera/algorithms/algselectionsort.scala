@@ -1,7 +1,7 @@
 package coursera.algorithms
 
 object algselectionsort {
-	def selectionSort(arr: Array[Double]) {
+	def selectionSort[T <% Ordered[T]](arr: Array[T]) {
 	  for (i <- 0 until arr.length - 1) {
 	    var min = i
 	    for (j <- i+1 until arr.length) {

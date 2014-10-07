@@ -1,7 +1,7 @@
 package coursera.algorithms
 
 object algshellsort {
-  def shellSort(arr: Array[Double]) {
+  def shellSort[T <% Ordered[T]](arr: Array[T]) {
     val size = arr.length
     
     // calculate 3x+1 increment sequence from Knuth

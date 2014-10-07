@@ -1,7 +1,7 @@
 package coursera.algorithms
 
 object algquicksort {
-  def quickSort(lst: List[Double]): List[Double] = {
+  def quickSort[T <% Ordered[T]](lst: List[T]): List[T] = {
     if (lst.isEmpty || lst.tail.isEmpty) lst
     else { 
       val pivot = lst.head

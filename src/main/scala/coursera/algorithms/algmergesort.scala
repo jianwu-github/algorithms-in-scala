@@ -1,7 +1,7 @@
 package coursera.algorithms
 
 object algmergesort {
-  private def merge(a: List[Double], b: List[Double]): List[Double] = (a,b) match {
+  private def merge[T <% Ordered[T]](a: List[T], b: List[T]): List[T] = (a,b) match {
     case(Nil, _) => b
     case(_, Nil) => a
     case(x::xs, y::ys) =>
@@ -9,7 +9,7 @@ object algmergesort {
       else y :: merge(a, ys)
   }
   
-  def mergeSort(lst: List[Double]): List[Double] = {
+  def mergeSort[T <% Ordered[T]](lst: List[T]): List[T] = {
     if (lst.length < 2) lst
     else {
       val (first, second) = lst.splitAt(lst.length / 2)
