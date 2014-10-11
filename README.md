@@ -11,3 +11,4 @@ The implementation of some common algorithms from [Algorithms 4th Edition](http:
 * Shell Sort
 * Merge Sort
 * Quick Sort
+* Huffman Coding
