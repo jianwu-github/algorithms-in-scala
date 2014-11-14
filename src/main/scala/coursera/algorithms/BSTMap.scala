@@ -39,7 +39,7 @@ class BSTMap[K <% Ordered[K], V] extends mutable.Map[K, V] {
             }
         }
         
-        def recur(n: Node): Node = {
+        def recurAndRemove(n: Node): Node = {
             if (n == null) null 
             else {
                 if (n.key == key) {
@@ -57,18 +57,18 @@ class BSTMap[K <% Ordered[K], V] extends mutable.Map[K, V] {
                         n
                     }
                 } else if (key < n.key) { 
-                  n.left = recur(n.left)
+                  n.left = recurAndRemove(n.left)
                   n
                 }
                 else {
-                  n.right = recur(n.right)
+                  n.right = recurAndRemove(n.right)
                   n
                 }
                 
             }
         }
       
-        root = recur(root)
+        root = recurAndRemove(root)
         this
     }
     
