@@ -12,3 +12,4 @@ The implementation of some common algorithms from [Algorithms 4th Edition](http:
 * Merge Sort
 * Quick Sort
 * Huffman Coding
+* Binary Search Tree based on Scala Map
