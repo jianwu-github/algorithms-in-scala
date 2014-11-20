@@ -112,6 +112,51 @@ class BSTMap[K <% Ordered[K], V] extends mutable.Map[K, V] {
         
         helper(root)
     }
+    
+    override def size: Int = {
+        def size(n: Node): Int = {
+          if (n == null) 0 
+          else 1 + size(n.left) + size(n.right)
+        }  
+        
+        size(root)
+    }
+    
+    def preOrderTravel(visit: (K, V) => Unit) {
+        def preOrderRecur(n: Node) {
+            if (n != null) {
+              visit(n.key, n.value)
+              preOrderRecur(n.left)
+              preOrderRecur(n.right)
+            }
+        }
+        
+        preOrderRecur(root)
+    }
+    
+    def postOrderTravel(visit: (K, V) => Unit) {
+        def postOrderRecur(n: Node) {
+            if (n != null) {
+              postOrderRecur(n.left)
+              postOrderRecur(n.right)
+              visit(n.key, n.value)
+            }
+        }
+        
+        postOrderRecur(root)
+    }
+    
+    def inOrderTravel(visit: (K, V) => Unit) {
+        def inOrderRecur(n: Node) {
+            if (n != null) {
+              inOrderRecur(n.left)
+              visit(n.key, n.value)
+              inOrderRecur(n.right)
+            }
+        }
+        
+        inOrderRecur(root)
+    }
 }
 
 object BSTMap {
