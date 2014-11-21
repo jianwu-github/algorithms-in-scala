@@ -3,6 +3,7 @@ package coursera.algorithms
 import org.scalatest.FunSuite
 
 class TestSortAlgorithms extends FunSuite {
+  implicit def arrayToList[A](a: Array[A]) = a.toList 
   
   trait TestSets {
     val numOfTestData = 20
@@ -11,12 +12,12 @@ class TestSortAlgorithms extends FunSuite {
     def createTestDataList: List[Double] = List.fill(numOfTestData)(math.random)
     
     def testSorted(arr:Array[Double]):Boolean = {
-      (arr.zip(arr.tail)).forall(t => t._1<=t._2)
+        (arr.zip(arr.tail)).forall(t => t._1<=t._2)
     }
     
     def testSorted(lst:List[Double]):Boolean = {
       (lst.zip(lst.tail)).forall(t => t._1<=t._2)
-    }
+    } 
   }
   
   test("Bubble Sort Algorithm is correctly implemented") {
@@ -89,10 +90,16 @@ class TestSortAlgorithms extends FunSuite {
     }
   }
   
+  def testSorted(lst:List[Int]): Boolean = {
+      (lst.zip(lst.tail)).forall(t => t._1<=t._2)
+  }
+  
   test("Radix Sort is working with positive numbers") {
       val a = Array(123, 431, 346, 23, 0, 543, 972, 452)
       info("before radix sort: " + scala.runtime.ScalaRunTime.stringOf(a))
       algradixsort.radixSort(a)
       info("after radix sort: " + scala.runtime.ScalaRunTime.stringOf(a))
+      
+      assert(testSorted(a.toList))
   }
 }
