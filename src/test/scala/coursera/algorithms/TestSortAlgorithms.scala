@@ -88,4 +88,11 @@ class TestSortAlgorithms extends FunSuite {
       assert(testSorted(sortedData), true)
     }
   }
+  
+  test("Radix Sort is working with positive numbers") {
+      val a = Array(123, 431, 346, 23, 0, 543, 972, 452)
+      info("before radix sort: " + scala.runtime.ScalaRunTime.stringOf(a))
+      algradixsort.radixSort(a)
+      info("after radix sort: " + scala.runtime.ScalaRunTime.stringOf(a))
+  }
 }

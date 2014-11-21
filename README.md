@@ -11,5 +11,6 @@ The implementation of some common algorithms from [Algorithms 4th Edition](http:
 * Shell Sort
 * Merge Sort
 * Quick Sort
+* Radix Sort with positive numbers
 * Huffman Coding
 * Binary Search Tree based on Scala Map
