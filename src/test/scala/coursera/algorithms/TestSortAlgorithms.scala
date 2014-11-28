@@ -94,6 +94,17 @@ class TestSortAlgorithms extends FunSuite {
       (lst.zip(lst.tail)).forall(t => t._1<=t._2)
   }
   
+  test("Counting Sort or Key-indexed Counting is correctly implemented") {
+      val a = Array(2, 5, 3, 0, 2, 3, 0 ,3)
+      val R = 6
+      
+      info("before counting sort: " + scala.runtime.ScalaRunTime.stringOf(a))
+      val sortedData = algcountingsort.countingSort(a, R)
+      info("after counting sort: " + scala.runtime.ScalaRunTime.stringOf(sortedData))
+      
+      assert(testSorted(sortedData.toList))
+  }
+  
   test("Radix Sort is working with positive numbers") {
       val a = Array(123, 431, 346, 23, 0, 543, 972, 452)
       info("before radix sort: " + scala.runtime.ScalaRunTime.stringOf(a))
@@ -101,5 +112,5 @@ class TestSortAlgorithms extends FunSuite {
       info("after radix sort: " + scala.runtime.ScalaRunTime.stringOf(a))
       
       assert(testSorted(a.toList))
-  }
+  }  
 }
