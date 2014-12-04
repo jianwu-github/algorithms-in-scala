@@ -14,4 +14,8 @@ The implementation of some common algorithms from [Algorithms 4th Edition](http:
 * Binary Search Tree based on Scala Map
 * Key-indexed Counting or Counting Sort 
 * Radix Sort with positive numbers
+* Substring Search with ASCII String
+  * Brute-Force
+  * Knuth-Morris-Pratt Algorithm 
+  * Boyer-Moore Algorithm
 * Huffman Coding
