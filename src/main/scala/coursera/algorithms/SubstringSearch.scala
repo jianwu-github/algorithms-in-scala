@@ -111,11 +111,12 @@ object SubstringSearch {
             var skip = 0
             var textPos = 0
             
+            
             while (textPos <= textLength - patternLength) {
                 skip = 0
                 
-                for (patternPos <- patternLength - 1 to 0 by -1) {
-                    breakable {
+                breakable {
+                    for (patternPos <- patternLength - 1 to 0 by -1) { 
                         if (pattern.charAt(patternPos) != text.charAt(textPos + patternPos)) {
 							// mismatch, decide how many characters can be skipped based on
 							// mismatched character heuristic
