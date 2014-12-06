@@ -1,7 +1,7 @@
 Algorithms in Scala
 ===================
 
-The implementation of some common algorithms from [Algorithms 4th Edition](http://algs4.cs.princeton.edu/home/) using Scala
+The implementation of some common algorithms from [Algorithms 4th Edition](http://algs4.cs.princeton.edu/home/) using Scala, incluyding:
 
 * Fast Three Sum
 * Weighted Quick Union-Find
@@ -19,3 +19,9 @@ The implementation of some common algorithms from [Algorithms 4th Edition](http:
   * Knuth-Morris-Pratt Algorithm 
   * Boyer-Moore Algorithm
 * Huffman Coding
+
+Other interesting and/or useful Algorithms also included:
+
+* Dynamic Programming
+  * Longest Common Subsequence
+  * Longest Common Substring
