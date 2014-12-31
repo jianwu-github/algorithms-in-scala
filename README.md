@@ -25,5 +25,6 @@ Other interesting and/or useful Algorithms also included:
 
 * Dynamic Programming
   * Longest Common Subsequence
-  * Longest Common Substring
   * Longest Increasing Subsequence using Dynamic Programming and Patience Sorting
+  * Longest Common Substring
+  * Longest Palindromic Substring
