@@ -1,7 +1,7 @@
 Algorithms in Scala
 ===================
 
-The implementation of some common algorithms from [Algorithms 4th Edition](http://algs4.cs.princeton.edu/home/) using Scala, incluyding:
+The implementation of some common algorithms from [Algorithms 4th Edition](http://algs4.cs.princeton.edu/home/) using Scala, including:
 
 * Fast Three Sum
 * Weighted Quick Union-Find
